@@ -1,0 +1,199 @@
+:root {
+    --cor-primaria: #ffaab9;
+    --cor-destaque: #f61357;
+    --cor-texto: #c22046;
+    --cor-fundo: #F8FAFC;
+    --espacamento: 16px;
+    --fonte-principal: Arial, sans-serif;
+}
+
+/* Estilo geral */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: var(--fonte-principal);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+}
+
+/* Cabeçalho */
+header {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: calc(var(--espacamento) * 2);
+}
+
+/* Menu */
+nav {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: var(--espacamento);
+    padding: var(--espacamento);
+    background-color: white;
+}
+
+nav a {
+    color: var(--cor-primaria);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: var(--cor-destaque);
+}
+
+/* Conteúdo */
+main {
+    padding: calc(var(--espacamento) * 2);
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+section {
+    margin-bottom: calc(var(--espacamento) * 2);
+}
+
+.banner {
+    margin-bottom: 0;
+}
+
+/* Projetos e serviços */
+article,
+main section {
+    background-color: white;
+    padding: var(--espacamento);
+    margin-bottom: var(--espacamento);
+    border-radius: 8px;
+}
+
+/* Imagens */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Rodapé */
+footer {
+    background-color: var(--cor-primaria);
+    color: white;
+    text-align: center;
+    padding: var(--espacamento);
+}
+
+/* Telas maiores */
+@media (min-width: 768px) {
+
+    nav {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    main {
+        padding: calc(var(--espacamento) * 3);
+    }
+
+    main section {
+        display: flex;
+        flex-direction: row;
+        gap: var(--espacamento);
+        align-items: center;
+    }
+
+    article {
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+    }
+}
+
+/* BANNER */
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: 450px;
+    margin: 0;
+    overflow: hidden;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.banner-texto {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(177, 0, 74);
+    text-align: center;
+    width: 90%;
+}
+
+.banner-texto h1 {
+    font-size: 45px;
+    margin: 0 0 10px;
+}
+
+.banner-texto h2 {
+    font-size: 30px;
+    margin: 0 0 10px;
+}
+
+.banner-texto p {
+    font-size: 18px;
+    margin: 0;
+}
+
+/* GALERIA DE PROJETOS */
+
+.projetos {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+}
+
+.projetos h2 {
+    margin-bottom: 25px;
+    font-size: 30px;
+}
+
+/* Imagem principal */
+#imagem-destaque {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+    margin: 0 auto 25px;
+    border-radius: 15px;
+}
+
+/* Miniaturas */
+.galeria {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.miniatura {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.miniatura:hover {
+    transform: scale(1.08);
+}
